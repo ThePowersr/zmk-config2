@@ -8,6 +8,14 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+&led_strip {
+        compatible = "zmk,rgbled";
+        label = "RGB LEDs";
+        led_count = <27>;
+        color_start = <30 233 210>;
+        effect_start = <0>;
+};
+
 / {
         keymap {
                 compatible = "zmk,keymap";
