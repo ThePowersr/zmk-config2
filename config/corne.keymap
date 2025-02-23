@@ -11,7 +11,9 @@
 #include <dt-bindings/zmk/rgb.h>
 
 &led_strip {
-    chain-length = <27>;
+    chain-length = <27>; // Longitud de la tira LED
+    color-mapping = /bits/ 24 <0x42 0xDA 0xC7>; // Color #42dac7 en formato RGB (R, G, B)
+    default-color = /bits/ 24 <0x42 0xDA 0xC7>; // Color por defecto al iniciar
 };
 
 / {
@@ -26,7 +28,7 @@
             compatible = "zmk,behavior-rgb-underglow";
             label = "RGB_INIT";
             #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_COLOR 0x42dac7>;
+            bindings = <&rgb_ug RGB_TOG>; // Encender la tira LED con el color por defecto
         };
     };
 
@@ -71,6 +73,6 @@
     };
 
     init {
-        bindings = <&rgb_init>;
+        bindings = <&rgb_init>; // Inicializar el color al iniciar
     };
 };
