@@ -26,7 +26,7 @@
             compatible = "zmk,behavior-rgb-underglow";
             label = "RGB_INIT";
             #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_COLOR_HSB 172 69 85>; // Color en formato HSB
+            bindings = <&rgb_ug RGB_COLOR 0x42dac7>;
         };
     };
 
