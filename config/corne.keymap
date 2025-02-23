@@ -59,14 +59,21 @@
                         >;
                 };
                 extended_layer {
-                      label = "EXT";
-                      bindings = <
-                &trans    &bl BL_ON        &bl BL_TOG      &bl BL_DEC      &bl BL_SET    &kp F5        &kp F6           &kp F7                &kp F8                &kp F9     &kp F10    &kp F12
-                &trans    &bl BL_OFF       &bl BL_INC      &bl BL_CYCLE    &bl BL_SET    &kp C_VOL_DN  &kp C_VOL_UP     &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans     &trans     &trans           
-                &trans    &trans           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &trans                &trans                &trans     &trans     &trans   
-                                                            &trans        &trans        &trans         &trans           &trans           &trans
-                      >;
-                };
+    label = "EXT";
+    bindings = <
+        // Fila 1 (12 teclas: 6 por lado)
+        &trans  &bl BL_ON  &bl BL_TOG    &bl BL_DEC   &bl BL_SET    &kp F5          &kp F6          &kp F7                &kp F8                &kp F9     &kp F10    &kp F12
+
+        // Fila 2 (12 teclas: 6 por lado)
+        &trans  &bl BL_OFF &bl BL_INC    &bl BL_CYCLE &bl BL_SET    &kp C_VOL_DN    &kp C_VOL_UP    &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans     &trans     &trans
+
+        // Fila 3 (12 teclas: 6 por lado)
+        &trans  &trans     &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4    &trans                &trans                &trans     &trans     &trans
+
+        // Fila 4 (6 teclas: 3 por lado)
+        &trans  &trans     &trans        &trans       &trans        &trans
+    >;
+};
         };
     conditional_layers {
     compatible = "zmk,conditional-layers";
