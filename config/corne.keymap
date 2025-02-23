@@ -70,15 +70,15 @@
                 };
         };
     conditional_layers {
-    compatible = "zmk,conditional-layers";
-
-    Activate_EXT {
-      if-layers = <1 2>;
-      then-layer = <3>;
+        compatible = "zmk,conditional-layers";
+    
+        Activate_EXT {
+          if-layers = <1 2>;
+          then-layer = <3>;
+        };
     };
 
     init {
         bindings = <&rgb_init>;
     };
-  };
 };
