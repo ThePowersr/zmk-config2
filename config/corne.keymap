@@ -9,8 +9,7 @@
 #include <dt-bindings/zmk/bt.h>e
 
 &led_strip {
-    chain-length = <21>;
-    color_start = <30 233 210>;
+    chain-length = <27>;
 };
 
 / {
