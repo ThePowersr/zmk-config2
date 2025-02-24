@@ -16,23 +16,13 @@
     default-color = <0x42DAC7>;
 };
 
+&rgb_underglow {
+    color_mapping = <RGB_ORDER_GRB>;
+    default_color = <66 218 199>; // Rojo (RGB)
+    label = "RGB Underglow";
+};
+
 / {
-    behaviors {
-        rgb_ug_behavior: rgb_underglow { // Cambié rgb_ug a rgb_ug_behavior
-            compatible = "zmk,behavior-rgb-underglow";
-            label = "RGB_UG";
-            #binding-cells = <0>;
-        };
-
-        rgb_init: rgb_init {
-            compatible = "zmk,behavior-rgb-underglow";
-            label = "RGB_INIT";
-            #binding-cells = <0>;
-            bindings = <&rgb_ug_behavior RGB_TOG>; // También cambiar aquí
-        };
-    };
-
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -67,18 +57,5 @@
                              &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
-    };
-
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        Activate_EXT {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
-
-    init {
-        bindings = <&rgb_init>; // Inicializar el color al iniciar
     };
 };
