@@ -11,15 +11,7 @@
 #include <dt-bindings/zmk/rgb.h>
 
 &led_strip {
-    chain-length = <27>; // Longitud de la tira LED
-    color-mapping = <0x42DAC7>;
-    default-color = <0x42DAC7>;
-};
-
-&rgb_underglow {
-    color_mapping = <RGB_ORDER_GRB>;
-    default_color = <66 218 199>; // Rojo (RGB)
-    label = "RGB Underglow";
+    chain-length = <27>;
 };
 
 / {
